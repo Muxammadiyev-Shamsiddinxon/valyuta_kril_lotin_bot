@@ -51,13 +51,13 @@ async def bot_start(message: types.Message):
     await message.reply(text,reply_markup=Menu)
 
 
-@dp.message_handler(text="Krill-Lotin, Lotin-Krill ⌛️⏳")
+@dp.message_handler(text="Krill-Lotin⌛️⏳")
 async def send_link(message: types.Message):
     await message.answer("So'z yuboring ",reply_markup=menugaqaytish)
 
 
 
-@dp.message_handler(text="Valyuta Kursi")
+@dp.message_handler(text="Valyuta kursi💰")
 async def send_link(message: types.Message):
 
 
@@ -82,7 +82,7 @@ async def send_link(message: types.Message):
     soat=strftime("%H:%M:%S")
 
 
-    javob =f"<b>Valyuta Kurslari.</b>\n\n📅  {sana} \n\n🕔  {soat}  "
+    javob =f"<b>Valyuta Kurslari.</b>\n\n📅  {sana} \n"
     javob += f"\n\n<b>1-Aqsh dollar  = {math.ceil(kurs_aqsh)} so'm</b>"
     javob += f"\n<b>1-Russian ruble  = {math.ceil(kurs_ru)} so'm</b>"
 
@@ -93,7 +93,7 @@ async def send_link(message: types.Message):
 
 
 
-@dp.message_handler(text="◀️Ortga")
+@dp.message_handler(text="🔙 Ortga")
 async def send_link(message: types.Message):
     await message.answer("Asosiy menu ",reply_markup=Menu)
 
