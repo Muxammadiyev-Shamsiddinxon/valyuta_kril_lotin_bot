@@ -23,7 +23,8 @@ davlat_aqsh='USD'
 
 
 @dp.message_handler(CommandStart())
-async def bot_start(message: types.Message):
+@dp.message_handler(state=Krilstate.krilstate, text="/start")
+async def bot_start(message: types.Message, state: FSMContext):
     javob = f"Assalom Alaykum <b>...{message.from_user.first_name}...</b> Xush kelibsiz! \nKril-Lotin ,"
     javob += "Lotin-Kril botman😎😎. \nBo'lim tanlang:  "
     await message.reply(javob,reply_markup=Menu)
@@ -33,13 +34,15 @@ async def bot_start(message: types.Message):
     msg += f"<b>{message.from_user.full_name}</b>\n"
     msg += f" <b>{message.from_user.id}</b>\n\n"
     await bot.send_message(chat_id="5280188027", text=msg,reply_markup=Menu)
+    await state.finish()
 
 
 @dp.message_handler(CommandHelp())
-async def bot_start(message: types.Message):
+@dp.message_handler(state=Krilstate.krilstate, text="/help")
+async def bot_start(message: types.Message, state: FSMContext):
     text = "Botdan foydalanish uchun bo'limlarni tanlang"
     await message.reply(text,reply_markup=Menu)
-
+    await state.finish()
 
 @dp.message_handler(text="Krill-Lotin, Lotin-Krill ⌛️⏳")
 async def send_link(message: types.Message):
