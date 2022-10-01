@@ -4,7 +4,7 @@ from aiogram.utils.exceptions import (Unauthorized, InvalidQueryID, TelegramAPIE
                                       MessageTextIsEmpty, RetryAfter,
                                       CantParseEntities, MessageCantBeDeleted)
 
-
+# bu yerdagi kodlar xatoliklardi ushlab yana botni ushlashda davom ettiradi
 from loader import dp
 
 

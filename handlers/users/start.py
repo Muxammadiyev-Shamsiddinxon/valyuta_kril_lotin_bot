@@ -1,4 +1,6 @@
 import datetime as dt
+from time import strftime
+
 from aiogram import types
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.builtin import CommandStart, CommandHelp
