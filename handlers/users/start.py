@@ -65,8 +65,8 @@ async def send_link(message: types.Message):
     # sana va vaqtni aniqlash
     hozir=dt.datetime.now()
     sana=hozir.date()
-    soat=strftime("%H:%M:%S")
-    javob =f"<b>Valyuta Kurslari.</b>\n\n📅  {sana} \n\n🕔  {soat}  "
+    # soat=strftime("%H:%M:%S")
+    javob =f"<b>Valyuta Kurslari.</b>\n\n📅  {sana}"
     javob += f"\n\n<b>1-Aqsh dollar  = {math.ceil(kurs_aqsh)} so'm</b>"
     javob += f"\n<b>1-Russian ruble  = {math.ceil(kurs_ru)} so'm</b>"
     await message.answer(javob, reply_markup=menugaqaytish)
