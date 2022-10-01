@@ -72,11 +72,6 @@ async def send_link(message: types.Message):
     await message.answer(javob, reply_markup=menugaqaytish)
 
 
-@dp.message_handler()
-async def send_link(message: types.Message):
-    await message.answer("Menga tugmalar orqali murojat qiling",reply_markup=Menu)
-
-
 @dp.message_handler(state=Krilstate.krilstate, text="◀️Ortga")
 async def send_link(message: types.Message, state: FSMContext):
     await message.answer("Asosiy menu ",reply_markup=Menu)
@@ -87,3 +82,7 @@ async def send_link(message: types.Message, state: FSMContext):
 async def send_link(message: types.Message):
     await message.answer("Asosiy menu ",reply_markup=Menu)
 
+
+@dp.message_handler()
+async def send_link(message: types.Message):
+    await message.answer("Menga tugmalar orqali murojat qiling",reply_markup=Menu)
