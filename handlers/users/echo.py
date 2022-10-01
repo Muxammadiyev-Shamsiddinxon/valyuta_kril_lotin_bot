@@ -1,12 +1,9 @@
 from loader import dp
 from aiogram import types
 from states.krilstate import Krilstate
-from keyboards.default.menugaqaytish import menugaqaytish
 
 # kril lotin kutubxonalari
 from handlers.transliterate import to_cyrillic,to_latin
-
-
 
 
 @dp.message_handler(state=Krilstate.krilstate)

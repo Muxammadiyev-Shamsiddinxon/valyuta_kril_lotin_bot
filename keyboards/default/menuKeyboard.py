@@ -6,8 +6,8 @@ Menu =  ReplyKeyboardMarkup(
         [
 
 
-            KeyboardButton(text='Krill-Lotin⌛️⏳'),
-            KeyboardButton(text='Valyuta kursi💰'),
+            KeyboardButton(text='Krill-Lotin, Lotin-Krill ⌛️⏳'),
+            KeyboardButton(text='Valyuta Kursi'),
 
 
         ],

@@ -5,7 +5,7 @@ menugaqaytish =  ReplyKeyboardMarkup(
 
         [
 
-            KeyboardButton(text='🔙 Ortga'),
+            KeyboardButton(text='◀️Ortga'),
 
         ]
 
